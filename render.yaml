@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-design-studio-pro
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: AI_MODE
+        value: cloud
+      - key: PYTHON_VERSION
+        value: 3.11.9
